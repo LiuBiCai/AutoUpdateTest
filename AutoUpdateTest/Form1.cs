@@ -15,7 +15,12 @@ namespace AutoUpdateTest
     {
         public Form1()
         {
-            AutoUpdater.Start("D:\\TEST\\AutoUpdaterTest.xml");
+            //AutoUpdater.InstalledVersion = new Version("1.2");
+            //AutoUpdater.ShowSkipButton = false;
+            //AutoUpdater.Mandatory = true;
+            AutoUpdater.Mandatory = true;
+            AutoUpdater.UpdateMode = Mode.Forced;
+            AutoUpdater.Start("http://47.243.42.238:8888/down/ssytuGPGP9kW");
             InitializeComponent();
         }
 
